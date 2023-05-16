@@ -34,7 +34,7 @@ app.use(express.json());
 //Rotas
 app.use('/users',userRouters)
 app.use('/tipos',tiposRouters)
-app.use('/oportunidades',middleware.checkToken,oportunidadesRouters)
+app.use('/oportunidades',oportunidadesRouters)
 app.use('/areas',areasRouters)
 app.use('/avisos',avisosRouters)
 app.use('/beneficios',beneficiosRouters)
@@ -46,7 +46,7 @@ app.use('/ficheiros',ficheirosRouters)
 app.use('/ideias',ideiasRouters)
 app.use('/interacoes',interacoesRouters)
 app.use('/notas',notasRouters)
-app.use('/ofertas',ofertaRouters)
+app.use('/ofertas',middleware.checkToken,ofertaRouters)
 app.use('/reunioes',reunioesRouters)
 
 
