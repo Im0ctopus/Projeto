@@ -1,0 +1,11 @@
+.tipo_ideia{
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: 100;
+}
+
+.card_ideia:hover{
+    cursor: default;
+}
