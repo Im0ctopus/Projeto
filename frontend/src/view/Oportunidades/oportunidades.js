@@ -9,7 +9,7 @@ export default function OportunidadesList(){
 
     
     function LoadOportunidades() {
-        const url = "http://localhost:3000/oportunidades/list";
+        const url = "https://pint-backend.onrender.com/oportunidades/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){

@@ -93,7 +93,7 @@ export default function OfertaCreate() {
         }
 
         else {
-            const baseUrl = "http://localhost:3000/ofertas/create";
+            const baseUrl = "https://pint-backend.onrender.com/ofertas/create";
             
             const datapost = {
               tipoofertavaga: selectTipo,
@@ -132,7 +132,7 @@ export default function OfertaCreate() {
 
 
     const LoadTiposOfertas = () =>{
-        const url = "http://localhost:3000/tipos/ofertas/list";
+        const url = "https://pint-backend.onrender.com/tipos/ofertas/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){

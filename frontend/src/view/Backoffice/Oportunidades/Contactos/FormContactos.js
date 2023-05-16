@@ -53,7 +53,7 @@ export default function ContactoCreate() {
             });     
         }
         else {
-            const baseUrl = "http://localhost:3000/contactos/create/oportunidade/" + oportunidadeId;
+            const baseUrl = "https://pint-backend.onrender.com/contactos/create/oportunidade/" + oportunidadeId;
             const datapost = {
                 primeiro_nome: campPNome,
                 ultimo_nome: campUNome,

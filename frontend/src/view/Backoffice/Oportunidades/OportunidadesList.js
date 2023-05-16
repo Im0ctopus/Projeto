@@ -19,7 +19,7 @@ export default function OportunidadesListBO(){
     },[]);
 
     function LoadOportunidadesBO() {
-        const url = "http://localhost:3000/oportunidades/list";
+        const url = "https://pint-backend.onrender.com/oportunidades/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -37,7 +37,7 @@ export default function OportunidadesListBO(){
     {
         {console.log(id)}
         // url do backend
-        const url = "http://localhost:3000/oportunidades/delete"
+        const url = "https://pint-backend.onrender.com/oportunidades/delete"
         // network
         axios.post(url,{
             id:id

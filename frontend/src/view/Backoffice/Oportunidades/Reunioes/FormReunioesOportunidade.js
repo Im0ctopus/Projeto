@@ -40,7 +40,7 @@ export default function ReuniaoOportunidadeCreate() {
                 });     
             }
         else {
-            const baseUrl = "http://localhost:3000/reunioes/oportunidade/"+ oportunidadeId + "/create";
+            const baseUrl = "https://pint-backend.onrender.com/reunioes/oportunidade/"+ oportunidadeId + "/create";
             const datapost = {
                 titulo: campTitulo,
                 detalhes: campDetalhes,

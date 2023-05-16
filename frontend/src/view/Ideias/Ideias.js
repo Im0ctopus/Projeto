@@ -8,7 +8,7 @@ export default function OfertavagaList(){
     const [dataOfertavaga, setdataOfertavaga] = useState([]);
     
     function LoadOfertavaga() {
-        const url = "http://localhost:3000/ideias/list";
+        const url = "https://pint-backend.onrender.com/ideias/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){

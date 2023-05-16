@@ -7,7 +7,7 @@ import React ,{useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
 
-const baseUrl = "http://localhost:3000/";
+const baseUrl = "https://pint-backend.onrender.com/";
 export default function OportunidadeEditBO(){
     const navigate = useNavigate()
 
@@ -35,7 +35,7 @@ export default function OportunidadeEditBO(){
 
 
     const LoadTiposProjeto = () =>{
-        const url = "http://localhost:3000/tipos/projetos/list";
+        const url = "https://pint-backend.onrender.com/tipos/projetos/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -51,7 +51,7 @@ export default function OportunidadeEditBO(){
     }
 
     const LoadAreasNegocio = () =>{
-        const url = "http://localhost:3000/areas/list";
+        const url = "https://pint-backend.onrender.com/areas/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -67,7 +67,7 @@ export default function OportunidadeEditBO(){
     }
 
     const LoadEstadosOportunidades = () =>{
-        const url = "http://localhost:3000/estado/oportunidades/list";
+        const url = "https://pint-backend.onrender.com/estado/oportunidades/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){

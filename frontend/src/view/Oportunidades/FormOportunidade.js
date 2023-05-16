@@ -55,7 +55,7 @@ export default function OportunidadeCreate() {
             });   
       }
       else {
-        const baseUrl = "http://localhost:3000/oportunidades/create";
+        const baseUrl = "https://pint-backend.onrender.com/oportunidades/create";
         const datapost = {
           tipodeprojeto: selectTipo,
           areadenegocio: selectArea,
@@ -89,7 +89,7 @@ export default function OportunidadeCreate() {
 
 
       const LoadTiposProjeto = () =>{
-          const url = "http://localhost:3000/tipos/projetos/list";
+          const url = "https://pint-backend.onrender.com/tipos/projetos/list";
           axios.get(url)
           .then(res => {
               if(res.data.success){
@@ -105,7 +105,7 @@ export default function OportunidadeCreate() {
       }
 
       const LoadAreasNegocio = () =>{
-          const url = "http://localhost:3000/areas/list";
+          const url = "https://pint-backend.onrender.com/areas/list";
           axios.get(url)
           .then(res => {
               if(res.data.success){

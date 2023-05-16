@@ -18,7 +18,7 @@ export default function InteracoesContactoUpdate() {
     const [stringTipo, setstringTipo] = useState("");
     
     const LoadTiposInteracao = () =>{
-        const url = "http://localhost:3000/tipos/interacao/list";
+        const url = "https://pint-backend.onrender.com/tipos/interacao/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -34,7 +34,7 @@ export default function InteracoesContactoUpdate() {
     }
 
     const LoadInteracao = () =>{
-        const url = "http://localhost:3000/interacoes/get/"+interacaoId+"/contacto/"+contactoId+"/oportunidade/"+oportunidadeId
+        const url = "https://pint-backend.onrender.com/interacoes/get/"+interacaoId+"/contacto/"+contactoId+"/oportunidade/"+oportunidadeId
         axios.get(url)
         .then(res=>{
         if (res.data.success) {
@@ -76,7 +76,7 @@ export default function InteracoesContactoUpdate() {
             });
         }
         else {
-            const baseUrl = "http://localhost:3000/interacoes/update/"+interacaoId+"/contacto/"+contactoId+"/oportunidade/"+oportunidadeId
+            const baseUrl = "https://pint-backend.onrender.com/interacoes/update/"+interacaoId+"/contacto/"+contactoId+"/oportunidade/"+oportunidadeId
             const datapost = {
                 motivo: campMotivo,
                 tipo: selectTipo

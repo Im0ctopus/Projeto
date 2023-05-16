@@ -18,7 +18,7 @@ export default function NotasInteracaoListBO(){
     },[]);
 
     function LoadNotasInteracoesBO() {
-        const url = "http://localhost:3000/notas/interacoes/"+interacaoId+"/contactos/"+contactoId+"/list"
+        const url = "https://pint-backend.onrender.com/notas/interacoes/"+interacaoId+"/contactos/"+contactoId+"/list"
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -35,7 +35,7 @@ export default function NotasInteracaoListBO(){
     function SendDelete(id)
     {
         // url do backend 
-        const url = "http://localhost:3000/oportunidades/delete"
+        const url = "https://pint-backend.onrender.com/oportunidades/delete"
         // network
         axios.post(url,{
             id:id

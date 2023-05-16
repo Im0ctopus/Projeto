@@ -34,7 +34,7 @@ export default function IdeiaCreate() {
           });   
     }
     else {
-      const baseUrl = "http://localhost:3000/ideias/create";
+      const baseUrl = "https://pint-backend.onrender.com/ideias/create";
       Swal.fire({
         position: 'mid',
         icon: 'success',
@@ -63,7 +63,7 @@ export default function IdeiaCreate() {
 
 
     const LoadTiposIdeia = () =>{
-        const url = "http://localhost:3000/tipos/ideias/list";
+        const url = "https://pint-backend.onrender.com/tipos/ideias/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){

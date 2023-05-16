@@ -7,7 +7,7 @@ import React ,{useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
-const baseUrl = "http://localhost:3000/";
+const baseUrl = "https://pint-backend.onrender.com/";
 
 export default function OfertaEditBO(){
 
@@ -41,7 +41,7 @@ const [stringEstado, setstringEstado] = useState("");
 
 
 const LoadTiposOfertas = () =>{
-    const url = "http://localhost:3000/tipos/ofertas/list";
+    const url = "https://pint-backend.onrender.com/tipos/ofertas/list";
     axios.get(url)
     .then(res => {
         if(res.data.success){
@@ -57,7 +57,7 @@ const LoadTiposOfertas = () =>{
 }
 
 const LoadEstadosOfertas = () =>{
-    const url = "http://localhost:3000/estado/ofertasvagas/list";
+    const url = "https://pint-backend.onrender.com/estado/ofertasvagas/list";
     axios.get(url)
     .then(res => {
         if(res.data.success){

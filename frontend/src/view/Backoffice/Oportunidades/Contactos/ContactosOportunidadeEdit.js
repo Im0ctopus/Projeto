@@ -15,7 +15,7 @@ export default function ContactosOportunidadeUpdate() {
     const [campTelemovel, setcampTelemovel] = useState("");
 
     const LoadContacto = () =>{
-        const url = "http://localhost:3000/contactos/get/"+ contactoId +"/oportunidade/"+oportunidadeId
+        const url = "https://pint-backend.onrender.com/contactos/get/"+ contactoId +"/oportunidade/"+oportunidadeId
         axios.get(url)
         .then(res=>{
         if (res.data.success) {
@@ -78,7 +78,7 @@ export default function ContactosOportunidadeUpdate() {
             });     
         }
         else {
-            const baseUrl = "http://localhost:3000/contactos/update/"+ contactoId + "/oportunidade/" + oportunidadeId;
+            const baseUrl = "https://pint-backend.onrender.com/contactos/update/"+ contactoId + "/oportunidade/" + oportunidadeId;
             const datapost = {
                 primeiro_nome: campPNome,
                 ultimo_nome: campUNome,

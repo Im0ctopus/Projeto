@@ -57,7 +57,7 @@ export default function Register() {
         }
 
         else {
-            const baseUrl = "http://localhost:3000/users/register";
+            const baseUrl = "https://pint-backend.onrender.com/users/register";
                 const datapost = {
                 pname: campPNome,
                 uname: campUNome,

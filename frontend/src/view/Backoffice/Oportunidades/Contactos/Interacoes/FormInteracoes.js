@@ -16,7 +16,7 @@ export default function InteracaoCreate() {
     const [selectTipo, setSelectTipo] = useState("");
         
     const LoadTiposInteracao = () =>{
-        const url = "http://localhost:3000/tipos/interacao/list";
+        const url = "https://pint-backend.onrender.com/tipos/interacao/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -48,7 +48,7 @@ export default function InteracaoCreate() {
             });
         }
         else {
-            const baseUrl = "http://localhost:3000/interacoes/create/contacto/"+contactoId+"/oportunidade/"+oportunidadeId;
+            const baseUrl = "https://pint-backend.onrender.com/interacoes/create/contacto/"+contactoId+"/oportunidade/"+oportunidadeId;
             const datapost = {
                 tipo: selectTipo,
                 motivo: campMotivo,

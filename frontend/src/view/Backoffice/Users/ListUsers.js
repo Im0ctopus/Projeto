@@ -17,7 +17,7 @@ export default function ListUserBO(){
     },[]);
 
     function LoadUsersBO() {
-        const url = "http://localhost:3000/users/list/";
+        const url = "https://pint-backend.onrender.com/users/list/";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -34,7 +34,7 @@ export default function ListUserBO(){
     function SendDelete(id)
     {
         // url do backend 
-        const url = "http://localhost:3000/oportunidades/delete"
+        const url = "https://pint-backend.onrender.com/oportunidades/delete"
         // network
         axios.post(url,{
             id:id

@@ -2,7 +2,7 @@ import axios from "axios";
 class AuthService {
     login(email, password) {
       return axios
-        .post("http://localhost:3000/users/login", { email, password })
+        .post("https://pint-backend.onrender.com/users/login", { email, password })
         .then((res) => {
           if (res.data.token) {
             localStorage.setItem("user", JSON.stringify(res.data));

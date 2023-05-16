@@ -23,7 +23,7 @@ export default function ReuniaoOportunidadeEdit() {
     const [stringEstado, setstringEstado] = useState("");
 
     const LoadEstadosReuniao = () =>{
-        const url = "http://localhost:3000/estado/reuniao/list";
+        const url = "https://pint-backend.onrender.com/estado/reuniao/list";
         axios.get(url)
         .then(res => {
             if(res.data.success){
@@ -39,7 +39,7 @@ export default function ReuniaoOportunidadeEdit() {
     }
 
     const LoadReuniao = () =>{
-        const url = "http://localhost:3000/reunioes/oportunidades/"+oportunidadeId+"/reuniao/" + reuniaoId
+        const url = "https://pint-backend.onrender.com/reunioes/oportunidades/"+oportunidadeId+"/reuniao/" + reuniaoId
         axios.get(url)
         .then(res=>{
         if (res.data.success) {
@@ -101,7 +101,7 @@ export default function ReuniaoOportunidadeEdit() {
             });     
         }
         else {
-            const baseUrl = "http://localhost:3000/reunioes/oportunidades/"+ oportunidadeId + "/reuniao/" + reuniaoId + "/update";
+            const baseUrl = "https://pint-backend.onrender.com/reunioes/oportunidades/"+ oportunidadeId + "/reuniao/" + reuniaoId + "/update";
             const datapost = {
                 titulo: campTitulo,
                 detalhes: campDetalhes,
