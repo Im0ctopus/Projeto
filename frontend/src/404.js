@@ -7,7 +7,7 @@ function notfound() {
             <h1 className="error">
                 <span className="quatros">4</span>
                 <span className="zero">0</span>
-                <span className="quatros">5</span>
+                <span className="quatros">4</span>
                 </h1>
             <h5 className="error_msg">Página não encontrada</h5>
         </div>
