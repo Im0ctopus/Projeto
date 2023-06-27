@@ -110,7 +110,7 @@ controllers.register = async (req, res) => {
     from: 'softinsa007@gmail.com',
     to: email,
     subject: 'Softinsa Confirmação de Registo',
-    html: '<h1>Olá ' + pname + '!</h1><p>Seja bem-vindo à plataforma da Softinsa. Para aceder à sua conta, conffirme o seu email no link abaixo.</p><a href="http://localhost:3001/confirmar/' + token + '">Confirmar Email</a><p>Até já!</p>'
+    html: '<h1>Olá ' + pname + '!</h1><p>Seja bem-vindo à plataforma da Softinsa. Para aceder à sua conta, conffirme o seu email no link abaixo.</p><a href="https://lon3rgoahny.sytes.net/confirmar/' + token + '">Confirmar Email</a><p>Até já!</p>'
 
   };
 
@@ -184,7 +184,7 @@ controllers.login = async (req, res) => {
             to: email,
             subject: 'Softinsa Confirmação de Registo',
             // type a text message here with the link to the login page and a paragraph welcoming the user to the platform
-            html: '<h1>Olá ' + user.primeiro_nome + '!</h1><p>Seja bem-vindo à plataforma da Softinsa. Para aceder à sua conta, conffirme o seu email no link abaixo.</p><a href="http://localhost:3001/confirmar/' + token + '">Confirmar Email</a><p>Até já!</p>'
+            html: '<h1>Olá ' + user.primeiro_nome + '!</h1><p>Seja bem-vindo à plataforma da Softinsa. Para aceder à sua conta, conffirme o seu email no link abaixo.</p><a href="https://lon3rgoahny.sytes.net/confirmar/' + token + '">Confirmar Email</a><p>Até já!</p>'
 
           };
           transporter.sendMail(mailOptions, (error, info) => {
@@ -381,7 +381,7 @@ controllers.forgotpassword = async (req, res) => {
         from: 'softinsa007@gmail.com',
         to: email,
         subject: 'Softinsa Redefinir a Senha',
-        html: '<h1>Olá, ' + user.primeiro_nome + '!</h1><p>Recebemos uma solicitação para redefinir a senha da sua conta na plataforma da Softinsa. Para prosseguir com a alteração da senha, clique no link abaixo:</p><a href="http://localhost:3001/redefinir-senha/' + token + '">Redefinir Senha</a><p>Caso você não tenha solicitado essa alteração, por favor, ignore este e-mail.</p><p>Até logo!</p>'
+        html: '<h1>Olá, ' + user.primeiro_nome + '!</h1><p>Recebemos uma solicitação para redefinir a senha da sua conta na plataforma da Softinsa. Para prosseguir com a alteração da senha, clique no link abaixo:</p><a href="https://lon3rgoahny.sytes.net/redefinir-senha/' + token + '">Redefinir Senha</a><p>Caso você não tenha solicitado essa alteração, por favor, ignore este e-mail.</p><p>Até logo!</p>'
 
       };
       transporter.sendMail(mailOptions, (error, info) => {
