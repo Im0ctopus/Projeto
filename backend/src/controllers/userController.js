@@ -543,7 +543,7 @@ controllers.updateProffile = async (req, res) => {
   }
   try {
     if (req.file) {
-      imagem = `http://localhost:3000/users/image/${req.file.filename}`;
+      imagem = `https://pint-backend.onrender.com/users/image/${req.file.filename}`;
     } else {
       const get_user = await Users.findByPk(id);
       if (get_user) {
