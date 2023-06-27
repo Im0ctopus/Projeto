@@ -69,7 +69,7 @@ controllers.register = async (req, res) => {
       message: 'Email já registado por favor tente outro ou faça login!'
     });
   }
-  let imagem = 'http://localhost:3000/users/image/default2'
+  let imagem = 'https://pint-backend.onrender.com/users/image/default2'
   const hashedPassword = bcrypt.hashSync(password, 10);
   const data = await Users.create({
     tiposdeperfilId: 4,
@@ -450,7 +450,7 @@ controllers.criaruser = async (req, res) => {
   const passwordLength = 10;
   const password = generatePassword(passwordLength);
   const hashedPassword = bcrypt.hashSync(password, 10);
-  const picture = `http://localhost:3000/users/image/default1`;
+  const picture = `https://pint-backend.onrender.com/users/image/default1`;
   const data = await Users.create({
     tiposdeperfilId: tiposdeperfilId,
     primeiro_nome: primeiro_nome,
