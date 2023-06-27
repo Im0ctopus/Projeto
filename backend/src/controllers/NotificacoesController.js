@@ -97,7 +97,7 @@ const verificarLista = async () => {
 
         console.log(diffMinutes);
 
-        if (diffMinutes <= 5) 
+        if (diffMinutes <= 65) 
         {
             console.log("menoir que 5");
             console.log(item.id);
