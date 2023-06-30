@@ -103,7 +103,7 @@ controllers.register = async (req, res) => {
       cargo: data.cargo
     },
     config.jwtSecret,
-    { expiresIn: '24hours' }
+    { expiresIn: '72hours' }
   );
 
   const mailOptions = {
@@ -166,7 +166,7 @@ controllers.login = async (req, res) => {
           cargo: user.cargo
         },
         config.jwtSecret,
-        { expiresIn: '24hours' }
+        { expiresIn: '72hours' }
       );
       if (user.estado == 0) {
         res.status(403).json({
@@ -293,7 +293,7 @@ controllers.loginGoogle = async (req, res) => {
         cargo: user.cargo
       },
       config.jwtSecret,
-      { expiresIn: '24hours' }
+      { expiresIn: '72hours' }
     );
 
     res.json({
