@@ -20,6 +20,19 @@ const transporter = nodemailer.createTransport({
 
 var moment = require('moment-timezone');
 
+const adjustDateTime = (date) => {
+    const timezone = 'Europe/London';
+    const momentDate = moment.tz(date, timezone);
+
+    const isDST = momentDate.isDST();
+    console.log(isDST);
+    if (isDST) {
+        return momentDate.subtract(1, 'hour').toDate();
+    } else {
+        return date;
+    }
+};
+
 const controllers = {}
 sequelize.sync()
 /* LISTAR ---------------------- */
@@ -79,7 +92,7 @@ controllers.create = async (req,res) => {
     const data = await Entrevistas.create({
         detalhes : detalhes,
         entrevistadorId : entrevistador,
-        data_entrevista: data_entrevista,
+        data_entrevista: adjustDateTime(data_entrevista),
         candidaturaId : idCand, 
         userId : user,
         estadosentrevistaId: 1,
@@ -189,7 +202,7 @@ controllers.update = async (req,res) => {
         entrevistadorId: entrevistador,
         classificacao: classificacao,
         estadosentrevistaId: estado,
-        data_entrevista: data_entrevista,
+        data_entrevista: adjustDateTime(data_entrevista),
         detalhes: detalhes,
     },
     {
