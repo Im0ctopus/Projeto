@@ -26,6 +26,19 @@ const transporter = nodemailer.createTransport({
 
 var moment = require('moment-timezone');
 
+const adjustDateTime = (date) => {
+    const timezone = 'Europe/London';
+    const momentDate = moment.tz(date, timezone);
+
+    const isDST = momentDate.isDST();
+    console.log(isDST);
+    if (isDST) {
+        return momentDate.add(1, 'hour').toDate();
+    } else {
+        return date;
+    }
+};
+
 
 const controllers = {}
 sequelize.sync()
@@ -376,11 +389,10 @@ sequelize.sync()
         const {titulo, detalhes, data_reuniao, estado
             } = req.body;   
         // Update data
-
         const data = await Reunioesoportunidades.update({
             titulo : titulo,
             detalhes: detalhes,
-            data_reuniao: data_reuniao,
+            data_reuniao: adjustDateTime(data_reuniao),
             estadosreuniaoId : estado,
         },
         {
