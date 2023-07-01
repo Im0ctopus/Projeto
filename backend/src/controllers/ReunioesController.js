@@ -621,7 +621,7 @@ sequelize.sync()
                     where: { id: idReuniao },
                 });
 
-                const dataReuniao = adjustDateTime(reuniao.dataValues.data_reuniao);
+                const dataReuniao = new Date(reuniao.dataValues.data_reuniao);
                 
                 const  isValidEmail = (email) =>{
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
