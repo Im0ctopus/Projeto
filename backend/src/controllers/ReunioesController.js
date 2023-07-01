@@ -33,7 +33,7 @@ const adjustDateTime = (date) => {
     const isDST = momentDate.isDST();
     console.log(isDST);
     if (isDST) {
-        return momentDate.add(1, 'hour').toDate();
+        return momentDate.subtract(1, 'hour').toDate();
     } else {
         return date;
     }
@@ -89,7 +89,7 @@ sequelize.sync()
             ideiaId : id,
             titulo : titulo,
             detalhes: detalhes,
-            data_reuniao: data_reuniao,
+            data_reuniao: adjustDateTime(data_reuniao),
             userId: user,
             estadosreuniaoId : 1,
         }) 
@@ -136,7 +136,7 @@ sequelize.sync()
         const data = await Reunioesideias.update({
             titulo : titulo,
             detalhes: detalhes,
-            data_reuniao: data_reuniao,
+            data_reuniao: adjustDateTime(data_reuniao),
             estadosreuniaoId : estado,
         },
         {
@@ -246,7 +246,7 @@ sequelize.sync()
 
                 const notificacao = await Notificacoes.create({
                     userId: item,
-                    data_reuniao: new Date(reuniao.dataValues.data_reuniao),
+                    data_reuniao:adjustDateTime(reuniao.dataValues.data_reuniao),
                     mensagem: reuniao.dataValues.titulo,
                     lido: 0,
                     tipo: 2,
@@ -343,7 +343,7 @@ sequelize.sync()
             oportunidadeId : id,
             titulo : titulo,
             detalhes: detalhes,
-            data_reuniao: data_reuniao,
+            data_reuniao: adjustDateTime(data_reuniao),
             userId: user,
             estadosreuniaoId : 1,
         }) 
@@ -503,7 +503,7 @@ sequelize.sync()
 
                 const notificacao = await Notificacoes.create({
                     userId: item,
-                    data_reuniao: new Date(reuniao.dataValues.data_reuniao),
+                    data_reuniao: adjustDateTime(reuniao.dataValues.data_reuniao),
                     mensagem: reuniao.dataValues.titulo,
                     lido: 0,
                     tipo: 1,
@@ -621,7 +621,7 @@ sequelize.sync()
                     where: { id: idReuniao },
                 });
 
-                const dataReuniao = new Date(reuniao.dataValues.data_reuniao);
+                const dataReuniao = adjustDateTime(reuniao.dataValues.data_reuniao);
                 
                 const  isValidEmail = (email) =>{
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
