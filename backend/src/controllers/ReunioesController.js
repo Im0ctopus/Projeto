@@ -246,7 +246,7 @@ sequelize.sync()
 
                 const notificacao = await Notificacoes.create({
                     userId: item,
-                    data_reuniao:new Date(reuniao.dataValues.data_reuniao),
+                    data_reuniao:adjustDateTime(reuniao.dataValues.data_reuniao),
                     mensagem: reuniao.dataValues.titulo,
                     lido: 0,
                     tipo: 2,
