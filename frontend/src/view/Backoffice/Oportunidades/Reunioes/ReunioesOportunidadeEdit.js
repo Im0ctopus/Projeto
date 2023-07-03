@@ -97,7 +97,7 @@ export default function ReuniaoOportunidadeEdit() {
             return momentDate.add(1, 'hour').toDate();
         } else {
             // Se estiver fora do horário de verão, subtrai 1 hora
-            return date;
+            return momentDate.add(2, 'hour').toDate();
         }
     };
 
