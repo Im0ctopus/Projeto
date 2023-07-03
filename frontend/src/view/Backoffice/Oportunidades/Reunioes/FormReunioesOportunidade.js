@@ -58,7 +58,7 @@ export default function ReuniaoOportunidadeCreate() {
                     return momentDate.add(1, 'hour').toDate();
                 } else {
                     // Se estiver fora do horário de verão, subtrai 1 hora
-                    return date;
+                    return momentDate.add(2, 'hour').toDate();
                 }
             };
             const baseUrl = "https://pint-backend.onrender.com/reunioes/oportunidades/" + oportunidadeId + "/create";
