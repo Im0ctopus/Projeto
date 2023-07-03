@@ -138,7 +138,9 @@ export default function ReuniaoOportunidadeEdit() {
             const datapost = {
                 titulo: campTitulo,
                 detalhes: campDetalhes,
-                data_reuniao: adjustedDate,
+                //data_reuniao: adjustedDate,
+                data_reuniao: campDataReuniao,
+
                 estado: selectEstado,
             };
             axios.post(baseUrl, datapost, { headers: authHeader() })
