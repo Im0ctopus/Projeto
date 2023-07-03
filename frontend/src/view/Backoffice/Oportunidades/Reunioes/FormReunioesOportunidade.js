@@ -55,7 +55,7 @@ export default function ReuniaoOportunidadeCreate() {
                 console.log(isDST);
                 if (isDST) {
                     // Se estiver dentro do horário de verão, subtrai 2 horas
-                    return momentDate.add(1, 'hour').toDate();
+                    return momentDate.subtract(1, 'hour').toDate();
                 } else {
                     // Se estiver fora do horário de verão, subtrai 1 hora
                     return date;
