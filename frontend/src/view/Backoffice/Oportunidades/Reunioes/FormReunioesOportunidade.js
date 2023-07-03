@@ -66,7 +66,9 @@ export default function ReuniaoOportunidadeCreate() {
             const datapost = {
                 titulo: campTitulo,
                 detalhes: campDetalhes,
-                data_reuniao: adjustedDate,
+                //data_reuniao: adjustedDate,
+                data_reuniao: campDataReuniao,
+
                 user: authService.getCurrentUser().id,
             };
             axios.post(baseUrl, datapost, { headers: authHeader() })
