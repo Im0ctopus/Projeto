@@ -343,7 +343,7 @@ sequelize.sync()
             oportunidadeId : id,
             titulo : titulo,
             detalhes: detalhes,
-            data_reuniao: data_reuniao,
+            data_reuniao: adjustDateTime(data_reuniao),
             userId: user,
             estadosreuniaoId : 1,
         }) 
