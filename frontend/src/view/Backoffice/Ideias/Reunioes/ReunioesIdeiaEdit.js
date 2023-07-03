@@ -2,7 +2,7 @@ import axios from 'axios';
 import authHeader from '../../../auth.header'
 
 import React, { useEffect, useState } from "react";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2/dist/sweetalert2.js' 
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import 'sweetalert2/src/sweetalert2.scss'
 import { SyncLoader } from 'react-spinners';
