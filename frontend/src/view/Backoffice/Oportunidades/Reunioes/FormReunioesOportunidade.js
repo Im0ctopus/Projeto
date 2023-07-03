@@ -62,7 +62,9 @@ export default function ReuniaoOportunidadeCreate() {
                 }
             };
             const baseUrl = "https://pint-backend.onrender.com/reunioes/oportunidades/" + oportunidadeId + "/create";
-            const adjustedDate = (adjustDateTime(new Date(campDataReuniao)));
+            //const adjustedDate = (adjustDateTime(new Date(campDataReuniao)));
+                        const adjustedDate = (adjustDateTime(campDataReuniao));
+
             const datapost = {
                 titulo: campTitulo,
                 detalhes: campDetalhes,
