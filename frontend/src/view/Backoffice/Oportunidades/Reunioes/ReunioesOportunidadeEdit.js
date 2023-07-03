@@ -94,10 +94,10 @@ export default function ReuniaoOportunidadeEdit() {
         console.log(isDST);
         if (isDST) {
             // Se estiver dentro do horário de verão, subtrai 2 horas
-            return momentDate.add(1, 'hour').toDate();
+            return momentDate.add(2, 'hour').toDate();
         } else {
             // Se estiver fora do horário de verão, subtrai 1 hora
-            return date;
+            return momentDate.add(4, 'hour').toDate();
         }
     };
 
