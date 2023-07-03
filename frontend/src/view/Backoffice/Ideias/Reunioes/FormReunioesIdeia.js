@@ -60,7 +60,7 @@ export default function ReunioesIdeiaCreate() {
     };
 
             const baseUrl = "https://pint-backend.onrender.com/reunioes/ideias/" + ideiaId + "/create";
-            const adjustedDate = (adjustDateTime(new Date(campDataReuniao)));
+            const adjustedDate = (adjustDateTime(campDataReuniao));
 
             const datapost = {
                 titulo: campTitulo,
