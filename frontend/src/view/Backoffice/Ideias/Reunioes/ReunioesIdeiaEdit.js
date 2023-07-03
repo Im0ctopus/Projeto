@@ -128,7 +128,7 @@ export default function ReunioesIdeiaEdit() {
         }
         else {
             const baseUrl = "https://pint-backend.onrender.com/reunioes/ideias/" + ideiaId + "/reuniao/" + reuniaoId + "/update";
-            const adjustedDate = (adjustDateTime(new Date(campDataReuniao)));
+            const adjustedDate = (adjustDateTime(campDataReuniao));
 
             const datapost = {
                 titulo: campTitulo,
