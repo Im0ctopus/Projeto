@@ -35,7 +35,7 @@ const adjustDateTime = (date) => {
     if (isDST) {
         return momentDate.subtract(1, 'hour').toDate();
     } else {
-        return date;
+        return momentDate.subtract(2, 'hour').toDate();
     }
 };
 
