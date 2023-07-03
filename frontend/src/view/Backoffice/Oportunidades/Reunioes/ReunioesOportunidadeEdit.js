@@ -138,8 +138,8 @@ export default function ReuniaoOportunidadeEdit() {
             const datapost = {
                 titulo: campTitulo,
                 detalhes: campDetalhes,
-                //data_reuniao: adjustedDate,
-                data_reuniao: campDataReuniao,
+                data_reuniao: adjustedDate,
+                //data_reuniao: campDataReuniao,
 
                 estado: selectEstado,
             };
