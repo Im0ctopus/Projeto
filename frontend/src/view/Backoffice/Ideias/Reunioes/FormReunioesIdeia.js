@@ -44,20 +44,20 @@ export default function ReunioesIdeiaCreate() {
         }
         else {
             const adjustDateTime = (date) => {
-                const timezone = 'Europe/London';
-                const momentDate = moment.tz(date, timezone);
+        const timezone = 'Europe/London';
+        const momentDate = moment.tz(date, timezone);
 
-                // Verifica se a data está dentro do horário de verão
-                const isDST = momentDate.isDST();
-                console.log(isDST);
-                if (isDST) {
-                    // Se estiver dentro do horário de verão, subtrai 2 horas
-                    return momentDate.add(1, 'hour').toDate();
-                } else {
-                    // Se estiver fora do horário de verão, subtrai 1 hora
-                    return date;
-                }
-            };
+        // Verifica se a data está dentro do horário de verão
+        const isDST = momentDate.isDST();
+        console.log(isDST);
+        if (isDST) {
+            // Se estiver dentro do horário de verão, subtrai 2 horas
+            return momentDate.add(1, 'hour').toDate();
+        } else {
+            // Se estiver fora do horário de verão, subtrai 1 hora
+            return momentDate.add(2, 'hour').toDate();
+        }
+    };
 
             const baseUrl = "https://pint-backend.onrender.com/reunioes/ideias/" + ideiaId + "/create";
             const adjustedDate = (adjustDateTime(new Date(campDataReuniao)));
