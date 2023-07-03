@@ -100,7 +100,6 @@ export default function ReunioesIdeiaListBO() {
                             <th scope="col">ESTADO</th>
                             <th scope="col">DATA</th>
                             <th scope="col">EDITAR</th>
-                            <th colSpan="2">AÇÃO</th>
 
                         </tr>
                     </thead>
